@@ -52,7 +52,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      vb.gui = true
      vb.name = "dealvm"
      vb.cpus = 4
-     vb.customize ["modifyvm", :id, "--memory", "4096"]
+     vb.customize ["modifyvm", :id, "--memory", "8192"]
   end
 
 end
