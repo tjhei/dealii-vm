@@ -33,7 +33,7 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm
 5. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoclean
    - run zerofree to remove disk size (need to boot into safe mode):
-     reboot into recovery, mount -o remount,rw /, zerofree
+     reboot into recovery, mount -o remount,rw /
      sudo mount -o ro -t ext4 /dev/sda1 /bla
      zerofree -v /dev/sda1
      also see https://wiki.ubuntu.com/RecoveryMode
