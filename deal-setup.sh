@@ -9,19 +9,16 @@ rm -rf dealii
 git clone https://github.com/dealii/dealii.git
 fi
 
-cd dealii && git checkout v8.3.0 && cd ..
+cd dealii && git checkout v8.4.1 && cd ..
 
     mkdir build && cd build && \
-    cmake -DDEAL_II_WITH_MPI=ON \
-          -DDEAL_II_COMPONENT_EXAMPLES=OFF \
-          -DCMAKE_INSTALL_PREFIX=~/deal.II/installed \
-          -DP4EST_DIR=~/libs/p4est-1.1/ \
-	  -D PETSC_DIR=~/libs/petsc-3.6.1/ \
-	  -D PETSC_ARCH=arch-linux2-cxx-opt \
-	  -D DEAL_II_WITH_PETSC=ON \
-          -D TRILINOS_DIR=~/libs/trilinos-12.2.1/ \
-	  -D DEAL_II_WITH_TRILINOS=ON \
-          -DHDF5_DIR=~/libs/hdf5/ \
+    cmake -D DEAL_II_WITH_MPI=ON \
+          -D DEAL_II_COMPONENT_EXAMPLES=OFF \
+          -D CMAKE_INSTALL_PREFIX=~/deal.II/installed \
+          -D DEAL_II_WITH_P4EST=ON \
+          -D DEAL_II_WITH_PETSC=ON \
+          -D DEAL_II_WITH_TRILINOS=ON \
+          -D DEAL_II_WITH_HDF5=ON \
           ../dealii && \
     make -j2 && make install && \
     cd .. #&& rm -rf build
