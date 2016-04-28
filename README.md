@@ -36,6 +36,12 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm
   - download aspect manual.pdf and put on desktop
   - add firefox to autostart: settings->session and startup->add
   - disable screensaver in "light locker settings"
+  - install qtcreator: 
+       https://www.qt.io/download-open-source/#section-6
+       or https://download.qt.io/official_releases/qtcreator/3.6/3.6.1/
+       install into ~/bin/
+       add to path
+       add deal.II style: https://github.com/dealii/dealii/wiki/QtCreator
 5. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoclean
    - run zerofree to remove disk size (need to boot into safe mode):
