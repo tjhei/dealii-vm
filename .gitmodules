@@ -1,0 +1,3 @@
+[submodule "candi"]
+	path = candi
+	url = https://github.com/tjhei/candi.git
