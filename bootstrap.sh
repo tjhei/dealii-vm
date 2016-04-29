@@ -58,6 +58,7 @@ fi
 #dealii & dependencies:
 
 sudo -u ubuntu mkdir -p /home/ubuntu/libs
+sudo -u ubuntu rm -rf /home/ubuntu/libs/candi
 sudo -u ubuntu cp -r /vagrant/candi /home/ubuntu/libs/candi
 sudo -u ubuntu cp /vagrant/lib-setup.sh /home/ubuntu/libs/setup.sh
 sudo -u ubuntu chmod u+x /home/ubuntu/libs/setup.sh
