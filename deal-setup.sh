@@ -5,13 +5,13 @@ echo "deal setup"
 rm -rf build installed
 
 if [ ! -d "dealii/.git" ]; then
-rm -rf dealii
-git clone https://github.com/dealii/dealii.git
+  rm -rf dealii
+  git clone https://github.com/dealii/dealii.git
+  cd dealii && git checkout v8.4.1 && cd ..
 fi
 
-cd dealii && git checkout v8.4.1 && cd ..
 
-    mkdir build && cd build && \
+mkdir build && cd build && \
     cmake -D DEAL_II_WITH_MPI=ON \
           -D DEAL_II_COMPONENT_EXAMPLES=OFF \
           -D CMAKE_INSTALL_PREFIX=~/deal.II/installed \
