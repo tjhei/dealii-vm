@@ -49,5 +49,6 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm
      sudo mount -o ro -t ext4 /dev/sda1 
      zerofree -v /dev/sda1
      also see https://wiki.ubuntu.com/RecoveryMode
+   - remove shared vagrant folder
    - export virtual machine after shutting down
 
