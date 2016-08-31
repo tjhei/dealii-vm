@@ -26,7 +26,14 @@ apt-get install -y \
     wget \
     python \
     numdiff \
-    leafpad gnuplot ninja-build htop paraview doxygen synaptic 
+    leafpad \
+    gnuplot gnuplot-x11 \
+    ninja-build \
+    htop \
+    paraview \
+    doxygen \
+    synaptic \
+    libarpack2-dev
 
 
 echo ubuntu:ubuntu | sudo chpasswd
