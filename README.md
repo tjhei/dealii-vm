@@ -45,6 +45,7 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
   - install https://github.com/rfjakob/earlyoom and test
 5. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean
+   - remove deal.II build files
    - run zerofree to remove disk size (need to boot into safe mode):
      reboot into recovery
      sudo mount -o ro -t ext4 /dev/sda1 
