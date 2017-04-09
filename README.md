@@ -2,14 +2,13 @@
 
 Generate a virtualbox machine from scratch for deal.II and ASPECT
 
-binaries available online at http://www.math.clemson.edu/~heister/dealvm
+binaries available online at http://www.math.clemson.edu/~heister/dealvm/
 
 # Howto:
 
 1. Get candi:
    ```
-   git clone https://github.com/tjhei/candi
-   git checkout experimental
+   git clone https://github.com/dealii/candi
    ```
 2. Get vagrant from https://www.vagrantup.com/ and create the machine:
 
@@ -26,6 +25,7 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm
     ```
 4. Manual setup:
   - add shortcuts to terminal, firefox, leafpad to menu bar
+  - add deal.II parameter-gui binary to ~/bin/
   - in firefox:
     - show bookmark bar
     - default homepage: info.html
@@ -42,8 +42,9 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm
        install into ~/bin/
        add to path
        add deal.II style: https://github.com/dealii/dealii/wiki/QtCreator
+  - install https://github.com/rfjakob/earlyoom and test
 5. For releasing the image:
-   - update software: apt-get update && apt-get upgrade && apt-get autoclean
+   - update software: apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean
    - run zerofree to remove disk size (need to boot into safe mode):
      reboot into recovery
      sudo mount -o ro -t ext4 /dev/sda1 
@@ -51,4 +52,5 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm
      also see https://wiki.ubuntu.com/RecoveryMode
    - remove shared vagrant folder
    - export virtual machine after shutting down
+   - git tag -s -m "Version 1.15.0" v1.15.0 && git push mygithub HEAD v1.15.0
 
