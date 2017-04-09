@@ -16,7 +16,7 @@ sudo dpkg --configure -a
 sudo apt-get remove -y gnumeric abiword xscreensaver  thunderbird xchat xfburn  gnome-sudoku gnome-mines abiword-common xchat-common gnome-screensaver gnumeric-common gnumeric-doc libabiword-3.0 xchat pidgin 
 
 apt-get install -y \
-    xfce4-terminal firefox eclipse-cdt git emacs zile subversion git-cola gitk meld gdb \
+    xfce4-terminal firefox git emacs zile subversion git-cola gitk meld gdb \
     valgrind g++ gfortran \
     libblas-dev \
     liblapack-dev \
