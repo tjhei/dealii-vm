@@ -25,15 +25,17 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
     ```
 4. Manual setup:
   - add shortcuts to terminal, firefox, leafpad to menu bar
-  - add deal.II parameter-gui binary to ~/bin/
+  - settings->power: disable all energy saving stuff
+  - add deal.II parameter-gui binary to ~/bin/, download from https://github.com/tjhei/parameter_gui/releases
   - in firefox:
     - show bookmark bar
     - default homepage: info.html
     - dealii.org
     - deal.II docs: https://dealii.org/8.4.1/doxygen/deal.II/index.html
-    - ASPECT: https://aspect.dealii.org/
-    - set browser.sessionstore.resume_from_crash = false
-  - download aspect manual.pdf and put on desktop
+    - ASPECT: https://aspect.geodynamics.org/
+    - about:config browser.sessionstore.resume_from_crash = false
+  - download aspect manual.pdf and put on desktop:
+    cd Desktop; wget https://github.com/geodynamics/aspect/releases/download/v2.0.0/manual-2.0.0.pdf
   - add firefox to autostart: settings->session and startup->add
   - disable screensaver in "light locker settings"
   - install qtcreator: 
