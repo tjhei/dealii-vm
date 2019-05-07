@@ -12,6 +12,7 @@ PACKAGES="${PACKAGES} once:p4est"
 PACKAGES="${PACKAGES} once:trilinos"
 PACKAGES="${PACKAGES} once:petsc"
 PACKAGES="${PACKAGES} once:slepc"
+PACKAGES="${PACKAGES} once:astyle"
 #PACKAGES="${PACKAGES} dealii"
 
 ./candi.sh -j4 -p ~/libs --packages="$PACKAGES"

@@ -2,10 +2,29 @@
 
 ls /vagrant/bash_aliases || { echo "vagrant mount not working";exit 1; }
 
-apt-get update
-apt-get upgrade -y
+sudo apt-get update
+sudo apt-get install -y xubuntu-core^
 
-sudo apt-get install -y xubuntu-desktop
+#apt-get upgrade -qy
+
+#echo 'APT::Install-Recommends "0";' >/etc/apt/apt.conf
+#echo 'APT::Install-Suggests "0";' >>/etc/apt/apt.conf
+
+
+
+# exit 0
+
+apt install thunar firefox firefox-locale-en \
+    xfce4-terminal firefox git emacs zile subversion git-cola gitk meld gdb    
+
+
+
+
+
+
+
+
+
 
 #echo 'APT::Install-Recommends "0";' >/etc/apt/apt.conf
 #echo 'APT::Install-Suggests "0";' >>/etc/apt/apt.conf
@@ -23,6 +42,7 @@ apt-get install -y \
     libopenmpi-dev \
     openmpi-bin \
     cmake \
+    cmake-curses-gui \
     wget \
     python \
     numdiff \
@@ -33,7 +53,8 @@ apt-get install -y \
     paraview \
     doxygen \
     synaptic \
-    libarpack2-dev
+    libarpack2-dev \
+    zlib1g-dev
 
 
 echo ubuntu:ubuntu | sudo chpasswd
@@ -42,7 +63,9 @@ echo -e "[SeatDefaults]\nautologin-user=ubuntu\nautologin-user-timeout=0" | sudo
 
 echo "dealvm" | sudo tee /etc/hostname
 
-sudo startx
+sudo adduser $USER vboxsf
+
+#sudo startx
 
 #base:
 cd /home/ubuntu
@@ -83,27 +106,12 @@ if [ ! -d "/home/ubuntu/aspect/.git" ]; then
   cd /home/ubuntu
   sudo -u ubuntu mkdir aspect
   echo `pwd`
-  sudo -u ubuntu git clone https://github.com/geodynamics/aspect.git
+  sudo -u ubuntu git clone https://github.com/geodynamics/aspect.git aspect/
 else
  cd /home/ubuntu/aspect
  sudo -u ubuntu git pull origin
  cd /home/ubuntu/
 fi
-
-#astyle
-if [ ! -e "/home/ubuntu/bin/astyle" ]; then
-
-  cd /home/ubuntu/bin/
-  rm -f astyle-2.04
-  sudo -u ubuntu mkdir astyle-2.04
-  cd astyle-2.04
-  sudo -u ubuntu wget http://downloads.sourceforge.net/project/astyle/astyle/astyle%202.04/astyle_2.04_linux.tar.gz  > /dev/null
-  sudo -u ubuntu tar xf astyle_2.04_linux.tar.gz
-  cd astyle/build/gcc
-  sudo -u ubuntu make -j4
-  sudo -u ubuntu ln -s /home/ubuntu/bin/astyle-2.04/astyle/build/gcc/bin/astyle /home/ubuntu/bin/astyle
-fi
-
 
 sudo -u ubuntu cp /vagrant/aspect-setup.sh /home/ubuntu/aspect/_setup.sh
 sudo -u ubuntu chmod u+x /home/ubuntu/aspect/_setup.sh

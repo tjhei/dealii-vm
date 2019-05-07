@@ -7,13 +7,13 @@ rm -rf build installed
 if [ ! -d "dealii/.git" ]; then
   rm -rf dealii
   git clone https://github.com/dealii/dealii.git
-  cd dealii && git checkout v8.5.0 && cd ..
+  cd dealii && git checkout v9.0.1 && cd ..
 fi
 
 
 mkdir build && cd build && \
     cmake -D DEAL_II_WITH_MPI=ON \
-          -D DEAL_II_COMPONENT_EXAMPLES=ON \
+          -D DEAL_II_COMPONENT_EXAMPLES=OFF \
           -D CMAKE_INSTALL_PREFIX=~/deal.II/installed \
           -D DEAL_II_WITH_P4EST=ON \
           -D DEAL_II_WITH_PETSC=ON \
@@ -21,4 +21,5 @@ mkdir build && cd build && \
           -D DEAL_II_WITH_HDF5=ON \
           ../dealii && \
     make -j2 && make install && \
+    make clean &&
     cd .. #&& rm -rf build
