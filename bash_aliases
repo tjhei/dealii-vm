@@ -18,3 +18,4 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\e[31m\]$(__git_ps1)\[\033[0
 esac
 
 export GIT_PS1_SHOWDIRTYSTATE=1
+export OMPI_MCA_btl_base_warn_component_unused=0

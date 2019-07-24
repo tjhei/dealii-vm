@@ -48,9 +48,11 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
 5. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean
    - remove deal.II build files
-   - run zerofree to remove disk size (need to boot into safe mode):
+   - run zerofree to remove disk size (need to boot into safe mode using ESC):
      reboot into recovery
-     sudo mount -o ro -t ext4 /dev/sda1 
+     systemctl stop systemd-journald.socket
+     systemctl stop systemd-journald.service
+     sudo mount -n -o remount,ro -t ext4 /dev/sda1 /
      zerofree -v /dev/sda1
      also see https://wiki.ubuntu.com/RecoveryMode
    - remove shared vagrant folder

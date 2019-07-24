@@ -1,5 +1,14 @@
 
-next:
+1.18.0: 2019-07-04
+  - deal. 9.1.1
+  - candi 9.1.1-r1
+  - updated ASPECT
+
+1.17.0: 2019-05-10
+  - deal 9.0.1
+  - candi 9.0.1-r5
+  - updated ASPECT
+  - switch to ubuntu 18.04
   - removed eclipse
 
 1.16.0 

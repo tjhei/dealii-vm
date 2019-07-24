@@ -7,7 +7,7 @@ rm -rf build installed
 if [ ! -d "dealii/.git" ]; then
   rm -rf dealii
   git clone https://github.com/dealii/dealii.git
-  cd dealii && git checkout v9.0.1 && cd ..
+  cd dealii && git checkout v9.1.1 && cd ..
 fi
 
 
