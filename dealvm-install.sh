@@ -14,4 +14,5 @@ wget -q -O - $REPO/$event.sh >~/bin/$event.sh || { echo "ERROR: can not download
 
 echo "downloaded $event.sh script. Executing..."
 
+chmod u+x ~/bin/$event.sh
 ~/bin/$event.sh || exit 2

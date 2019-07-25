@@ -18,4 +18,4 @@ else
     fi
 fi
 
-echo "updated $DIR..."
+echo "updated $DIR."
