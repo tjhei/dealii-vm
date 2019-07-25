@@ -3,6 +3,7 @@
   - deal. 9.1.1
   - candi 9.1.1-r1
   - updated ASPECT
+  - add postinstall download script
 
 1.17.0: 2019-05-10
   - deal 9.0.1

@@ -52,7 +52,8 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
      reboot into recovery
      systemctl stop systemd-journald.socket
      systemctl stop systemd-journald.service
-     sudo mount -n -o remount,ro -t ext4 /dev/sda1 /
+     echo u >/proc/sysrq-trigger
+     mount -n -o remount,ro -t ext4 /dev/sda1 /
      zerofree -v /dev/sda1
      also see https://wiki.ubuntu.com/RecoveryMode
    - remove shared vagrant folder
