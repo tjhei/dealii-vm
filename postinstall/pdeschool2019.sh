@@ -4,8 +4,9 @@ DIR=~/pdeschool2019
 
 if [ ! -d "$DIR" ]
 then
-   mkdir $DIR && cd $DIR && git clone https://github.com/tjhei/pdeschool.git .
-
+    sudo apt-get install gv
+    echo "export PATH=$PATH:/home/ubuntu/bin/qtcreator-4.9.0/bin" >> ~/.bash_aliases
+    mkdir $DIR && cd $DIR && git clone https://github.com/tjhei/pdeschool.git .
 else
     echo "$DIR exists..."
     cd $DIR
