@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/bionic64"
 
   config.vm.provision :shell, path: "bootstrap.sh"
-  config.disksize.size = '50GB'
+  config.disksize.size = '75GB'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs

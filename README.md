@@ -19,9 +19,8 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
 
     ```
     cd ~/libs && ./setup.sh
-    cd ~/deal.II/ && ./setup.sh
-    # make clean
-    cd ~/aspect && ./_setup.sh && make
+    cd ~/deal.II/ && ./setup.sh && make clean
+    cd ~/aspect && ./_setup.sh && make && mv aspect aspect.debug && make clean && mv aspect.debug aspect
     ```
 4. Manual setup:
   - add shortcuts to terminal, firefox, leafpad to menu bar
@@ -31,7 +30,7 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
     - show bookmark bar
     - default homepage: info.html
     - dealii.org
-    - deal.II docs: https://dealii.org/8.4.1/doxygen/deal.II/index.html
+    - deal.II docs: https://dealii.org/current/doxygen/deal.II/index.html
     - ASPECT: https://aspect.geodynamics.org/
     - about:config browser.sessionstore.resume_from_crash = false
   - download aspect manual.pdf and put on desktop:
@@ -45,6 +44,10 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
        add to path
        add deal.II style: https://github.com/dealii/dealii/wiki/QtCreator
   - install https://github.com/rfjakob/earlyoom and test
+  - install vscode https://code.visualstudio.com/download
+    plugins: c/c++, cmake, cmake tools
+    fix: max fs watches
+
 5. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean
    - remove deal.II build files
@@ -57,6 +60,10 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
      zerofree -v /dev/sda1
      also see https://wiki.ubuntu.com/RecoveryMode
    - remove shared vagrant folder
-   - export virtual machine after shutting down
+   - set to 2 cores, 7GB RAM
+   - serial port: disconnected
+   - export virtual machine after shutting down:
+     product URL: https://www.math.clemson.edu/~heister/dealvm/
+     name: deal.II VM
    - git tag -s -m "Version 1.15.0" v1.15.0 && git push mygithub HEAD v1.15.0
 

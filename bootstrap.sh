@@ -2,10 +2,10 @@
 
 ls /vagrant/bash_aliases || { echo "vagrant mount not working";exit 1; }
 
-sudo apt-get update
-sudo apt-get install -y xubuntu-core^
+apt-get update
+apt-get install -y xubuntu-core^
 
-#apt-get upgrade -qy
+apt-get upgrade -qy
 
 #echo 'APT::Install-Recommends "0";' >/etc/apt/apt.conf
 #echo 'APT::Install-Suggests "0";' >>/etc/apt/apt.conf
@@ -15,7 +15,7 @@ sudo apt-get install -y xubuntu-core^
 # exit 0
 
 apt install thunar firefox firefox-locale-en \
-    xfce4-terminal firefox git emacs zile subversion git-cola gitk meld gdb    
+    xfce4-terminal firefox git emacs zile subversion git-cola gitk meld gdb evince
 
 
 
