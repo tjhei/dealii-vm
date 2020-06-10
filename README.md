@@ -47,6 +47,11 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
   - install vscode https://code.visualstudio.com/download
     plugins: c/c++, cmake, cmake tools
     fix: max fs watches
+  - edit /etc/default/grub.d/50-cloudimg-settings.cfg
+    and remove console=ttyS0
+    sudo update-grub
+    and then disable serial port 1 in machine settings
+    also remove cidata second hd image
 
 5. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean

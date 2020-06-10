@@ -1,6 +1,6 @@
 1.19.0:
   - Updated: deal.II 9.2.0, ASPECT master, candi
-  - New: evince
+  - New: evince (default for pdf and eps)
   - New: vscode
   - Grow disk size to 75GB max up from 50GB
   - Fix: work-around for missing serial port error
