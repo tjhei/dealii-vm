@@ -1,3 +1,11 @@
+investigate:
+ - emacs default settings?
+
+1.20.0:
+- update visit to 3.1.2 (no longer crashing)
+- set reasonable defaults for .txt, .prm, .cc files
+- ASPECT release 2.2.0
+
 1.19.0:
   - Updated: deal.II 9.2.0, ASPECT master, candi
   - New: evince (default for pdf and eps)

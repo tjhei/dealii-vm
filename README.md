@@ -34,7 +34,7 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
     - ASPECT: https://aspect.geodynamics.org/
     - about:config browser.sessionstore.resume_from_crash = false
   - download aspect manual.pdf and put on desktop:
-    cd Desktop; wget https://github.com/geodynamics/aspect/releases/download/v2.0.0/manual-2.0.0.pdf
+    cd Desktop; wget https://github.com/geodynamics/aspect/releases/download/v2.2.0/aspect-manual-2.2.0.pdf
   - add firefox to autostart: settings->session and startup->add
   - disable screensaver in "light locker settings"
   - install qtcreator: 
@@ -46,12 +46,16 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
   - install https://github.com/rfjakob/earlyoom and test
   - install vscode https://code.visualstudio.com/download
     plugins: c/c++, cmake, cmake tools
-    fix: max fs watches
+    apply fix: max fs watches
   - edit /etc/default/grub.d/50-cloudimg-settings.cfg
     and remove console=ttyS0
     sudo update-grub
     and then disable serial port 1 in machine settings
     also remove cidata second hd image
+  - set reasonable defaults for txt, prm, cc files  (mousepad, vscode)
+  - install clang format:
+    cd deal.II && ./contrib/utilities/download_clang_format && cd clang-6/ && mv clang-format ~/bin/
+
 
 5. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean
