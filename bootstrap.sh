@@ -79,9 +79,9 @@ sudo -u ubuntu rmdir Pictures Music Public Templates Videos >/dev/null 2>&1
 if [ ! -d "/home/ubuntu/bin/visit2_8_2.linux-x86_64" ]; then
 echo "installing visit..."
 cd /home/ubuntu/bin
-sudo -u ubuntu wget -q "http://portal.nersc.gov/svn/visit/trunk/releases/2.8.2/visit2_8_2.linux-x86_64-ubuntu11.tar.gz"
-sudo -u ubuntu tar xf visit2_8_2.linux-x86_64-ubuntu11.tar.gz
-sudo -u ubuntu rm visit2_8_2.linux-x86_64-ubuntu11.tar.gz
+sudo -u ubuntu wget -q "https://github.com/visit-dav/visit/releases/download/v3.1.2/visit3_1_2.linux-x86_64-ubuntu18.tar.gz"
+sudo -u ubuntu tar xf visit3_1_2.linux-x86_64-ubuntu11.tar.gz
+sudo -u ubuntu rm visit3_1_2.linux-x86_64-ubuntu11.tar.gz
 fi
 
 
