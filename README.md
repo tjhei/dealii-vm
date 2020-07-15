@@ -10,19 +10,23 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
    ```
    git clone https://github.com/dealii/candi
    ```
-2. Get vagrant from https://www.vagrantup.com/ and create the machine:
+2. Get vagrant from https://www.vagrantup.com/ and the vagrant disksize plugin:
 
+    ```
+    vagrant plugin install vagrant-disksize
+    ```
+3. Create the machine:
     ```
     vagrant up
     ```
-3. compilation:
+4. compilation:
 
     ```
     cd ~/libs && ./setup.sh
     cd ~/deal.II/ && ./setup.sh && make clean
     cd ~/aspect && ./_setup.sh && make && mv aspect aspect.debug && make clean && mv aspect.debug aspect
     ```
-4. Manual setup:
+5. Manual setup:
   - add shortcuts to terminal, firefox, leafpad to menu bar
   - settings->power: disable all energy saving stuff
   - add deal.II parameter-gui binary to ~/bin/, download from https://github.com/tjhei/parameter_gui/releases
@@ -57,7 +61,7 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
     cd deal.II && ./contrib/utilities/download_clang_format && cd clang-6/ && mv clang-format ~/bin/
 
 
-5. For releasing the image:
+6. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean
    - remove deal.II build files
    - run zerofree to remove disk size (need to boot into safe mode using ESC):
