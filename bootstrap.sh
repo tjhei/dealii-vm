@@ -46,7 +46,6 @@ apt-get install -y \
     wget \
     python \
     numdiff \
-    leafpad \
     gnuplot gnuplot-x11 \
     ninja-build \
     htop \
@@ -76,12 +75,12 @@ sudo -u ubuntu mkdir -p bin
 sudo -u ubuntu rmdir Pictures Music Public Templates Videos >/dev/null 2>&1
 
 #visit:
-if [ ! -d "/home/ubuntu/bin/visit2_8_2.linux-x86_64" ]; then
+if [ ! -d "/home/ubuntu/bin/visit3_1_2.linux-x86_64" ]; then
 echo "installing visit..."
 cd /home/ubuntu/bin
-sudo -u ubuntu wget -q "https://github.com/visit-dav/visit/releases/download/v3.1.2/visit3_1_2.linux-x86_64-ubuntu18.tar.gz"
-sudo -u ubuntu tar xf visit3_1_2.linux-x86_64-ubuntu11.tar.gz
-sudo -u ubuntu rm visit3_1_2.linux-x86_64-ubuntu11.tar.gz
+sudo -u ubuntu wget -q "https://github.com/visit-dav/visit/releases/download/v3.1.2/visit3_1_2.linux-x86_64-ubuntu20.tar.gz"
+sudo -u ubuntu tar xf visit3_1_2.linux-x86_64-ubuntu20.tar.gz
+sudo -u ubuntu rm visit3_1_2.linux-x86_64-ubuntu20.tar.gz
 fi
 
 
