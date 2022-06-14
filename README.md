@@ -14,9 +14,6 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
 
     ```
     vagrant plugin install vagrant-disksize
-    ```
-3. Create the machine:
-    ```
     vagrant up
     ```
 4. compilation:

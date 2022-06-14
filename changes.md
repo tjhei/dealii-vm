@@ -1,5 +1,16 @@
 investigate:
  - emacs default settings?
+ - sudo usermod -aG vboxsf ubuntu
+ - update paraview to new version
+ - qtcreator: maybe older version to fix cxx bug?
+ - manual cmake install 3.17.3 or system?
+
+1.21.0:
+
+- update to ubuntu 20.04 LTS
+- leafpad replaced by mousepad
+- deal.II 9.3.3
+- ASPECT dev version from Feb 2022
 
 1.20.0:
 - update visit to 3.1.2 (no longer crashing)
