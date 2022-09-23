@@ -5,6 +5,11 @@ investigate:
  - qtcreator: maybe older version to fix cxx bug?
  - manual cmake install 3.17.3 or system?
 
+1.22:
+
+- deal.II 9.4
+- visit updated to 3.3.0
+
 1.21.0:
 
 - update to ubuntu 20.04 LTS
