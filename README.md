@@ -26,7 +26,9 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
 5. Manual setup:
   - add shortcuts to terminal, firefox, leafpad to menu bar
   - settings->power: disable all energy saving stuff
-  - add deal.II parameter-gui binary to ~/bin/, download from https://github.com/tjhei/parameter_gui/releases
+  - terminal:
+    - disable scroll on output
+    
   - in firefox:
     - show bookmark bar
     - default homepage: info.html
@@ -37,13 +39,7 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
   - download aspect manual.pdf and put on desktop:
     cd Desktop; wget https://github.com/geodynamics/aspect/releases/download/v2.2.0/aspect-manual-2.2.0.pdf
   - add firefox to autostart: settings->session and startup->add
-  - disable screensaver in "light locker settings"
-  - install qtcreator: 
-       https://www.qt.io/download-open-source/#section-6
-       or https://download.qt.io/official_releases/qtcreator/3.6/3.6.1/
-       install into ~/bin/
-       add to path
-       add deal.II style: https://github.com/dealii/dealii/wiki/QtCreator
+  - disable screensaver in "settings"
   - install https://github.com/rfjakob/earlyoom and test
   - install vscode https://code.visualstudio.com/download
     plugins: c/c++, cmake, cmake tools
