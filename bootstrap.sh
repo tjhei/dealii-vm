@@ -32,11 +32,12 @@ apt install thunar firefox firefox-locale-en \
 sudo /usr/share/debconf/fix_db.pl
 sudo dpkg --configure -a
 
-sudo apt-get remove -y gnumeric abiword xscreensaver  thunderbird xchat xfburn  gnome-sudoku gnome-mines abiword-common xchat-common gnome-screensaver gnumeric-common gnumeric-doc libabiword-3.0 xchat pidgin 
+sudo apt-get remove -y gnumeric abiword xscreensaver  thunderbird xchat xfburn  gnome-sudoku gnome-mines abiword-common gnome-screensaver gnumeric-common gnumeric-doc libabiword-3.0 xchat pidgin 
 
 apt-get install -y \
     xfce4-terminal firefox git emacs zile subversion git-cola gitk meld gdb \
     valgrind g++ gfortran \
+    mold \
     libblas-dev \
     liblapack-dev \
     libopenmpi-dev \
@@ -44,14 +45,17 @@ apt-get install -y \
     cmake \
     cmake-curses-gui \
     wget \
-    python \
+    python3 \
     numdiff \
     gnuplot gnuplot-x11 \
     ninja-build \
     htop \
     paraview \
     doxygen \
+    earlyoom \
+    kate \
     synaptic \
+    mousepad \
     libarpack2-dev \
     zlib1g-dev
 
@@ -62,7 +66,7 @@ echo -e "[SeatDefaults]\nautologin-user=ubuntu\nautologin-user-timeout=0" | sudo
 
 echo "dealvm" | sudo tee /etc/hostname
 
-sudo adduser $USER vboxsf
+#sudo adduser $USER vboxsf
 
 #sudo startx
 
@@ -72,7 +76,7 @@ sudo -u ubuntu cp /vagrant/bash_aliases /home/ubuntu/.bash_aliases
 sudo -u ubuntu mkdir -p /home/ubuntu/Desktop/
 sudo -u ubuntu cp /vagrant/info.html /home/ubuntu/Desktop/
 sudo -u ubuntu mkdir -p bin
-sudo -u ubuntu rmdir Pictures Music Public Templates Videos >/dev/null 2>&1
+sudo -u ubuntu rmdir Pictures Music Public Templates Videos || true
 
 #visit:
 if [ ! -d "/home/ubuntu/bin/visit3_3_0.linux-x86_64" ]; then
@@ -114,5 +118,4 @@ fi
 
 sudo -u ubuntu cp /vagrant/aspect-setup.sh /home/ubuntu/aspect/_setup.sh
 sudo -u ubuntu chmod u+x /home/ubuntu/aspect/_setup.sh
-
-
+sudo -u ubuntu rmdir /home/ubuntu/* || true
