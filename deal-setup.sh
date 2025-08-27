@@ -13,7 +13,7 @@ fi
 
 mkdir build && cd build && \
     cmake -D DEAL_II_WITH_MPI=ON \
-          -D DEAL_II_COMPONENT_EXAMPLES=OFF \
+          -D DEAL_II_COMPONENT_EXAMPLES=ON \
           -D CMAKE_INSTALL_PREFIX=~/deal.II/installed \
           -D DEAL_II_WITH_P4EST=ON \
           -D DEAL_II_WITH_PETSC=ON \

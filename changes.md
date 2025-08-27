@@ -5,6 +5,14 @@ investigate:
  - qtcreator: maybe older version to fix cxx bug?
  - manual cmake install 3.17.3 or system?
 
+1.24:
+- deal.II 9.7
+- remove visit
+
+1.23:
+
+- Ubuntu 22.04 LTS
+
 1.22:
 
 - deal.II 9.4

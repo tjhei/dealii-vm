@@ -57,6 +57,7 @@ binaries available online at http://www.math.clemson.edu/~heister/dealvm/
 6. For releasing the image:
    - update software: apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean
    - remove deal.II build files
+   - delete candi/trilinos/bin/*
    - run zerofree to remove disk size (need to boot into safe mode using ESC):
      reboot into recovery
      systemctl stop systemd-journald.socket
